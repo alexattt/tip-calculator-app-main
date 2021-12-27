@@ -195,16 +195,28 @@ main {
         color: $very-dark-cyan;
         background-color: $light-cyan;
       }
+
+      @media screen and (max-width: 923px) and (min-width: 845px){
+        width: 150px;
+      }
     }
 
     .active-tip-btn {
       color: $very-dark-cyan;
-      background-color: $light-cyan;
+      background-color: $strong-cyan;
     }
 
     .custom-tip {
       width: 110px;
       height: 40px;
+
+      @media screen and (max-width: 923px) and (min-width: 845px){
+        width: 150px;
+      }
+    }
+
+    @media screen and (max-width: 781px) and (min-width: 572px){
+      justify-content: center;
     }
   }
 }
@@ -245,11 +257,32 @@ main {
 
     .label {
       font-size: 0.9rem;
+
+      @media screen and (max-width: 417px) {
+        font-size: 0.75rem;
+      }
     }
 
     .sub-label {
       color: $dark-grayish-cyan-2;
       font-size: 0.7rem;
+
+      @media screen and (max-width: 417px) {
+        font-size: 0.55rem;
+      }
+    }
+  }
+
+  .tip-per-person, .total-per-person {
+    @media screen and (max-width: 417px) {
+      font-size: 1.25rem;
+      width: 130px;
+    }
+  }
+
+  .total-per-person {
+    @media screen and (max-width: 417px) {
+      margin-left: 6px;
     }
   }
 

@@ -240,14 +240,34 @@ main {
   background-color: rgba(38, 192, 171, 0.4);
 }
 
+@media screen and (max-width: 923px) and (min-width: 845px) {
+  .inputs-container .tips-container .tip-btn {
+    width: 150px;
+  }
+}
+
 .inputs-container .tips-container .active-tip-btn {
   color: #00494d;
-  background-color: rgba(38, 192, 171, 0.4);
+  background-color: #26c0ab;
 }
 
 .inputs-container .tips-container .custom-tip {
   width: 110px;
   height: 40px;
+}
+
+@media screen and (max-width: 923px) and (min-width: 845px) {
+  .inputs-container .tips-container .custom-tip {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 781px) and (min-width: 572px) {
+  .inputs-container .tips-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .results-container {
@@ -310,9 +330,34 @@ main {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 417px) {
+  .results-container .label-container .label {
+    font-size: 0.75rem;
+  }
+}
+
 .results-container .label-container .sub-label {
   color: #7f9c9f;
   font-size: 0.7rem;
+}
+
+@media screen and (max-width: 417px) {
+  .results-container .label-container .sub-label {
+    font-size: 0.55rem;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .results-container .tip-per-person, .results-container .total-per-person {
+    font-size: 1.25rem;
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .results-container .total-per-person {
+    margin-left: 6px;
+  }
 }
 
 .results-container .reset-btn {
