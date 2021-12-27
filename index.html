@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/index.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="flex-column">
+    <img src="./images/logo.svg" alt="" class="logo">
+    <div class="calculator-container flex-row">
+      <div class="inputs-container">
+        <label for="bill-amount">Bill</label><br>  
+        <input type="number" name="bill-amount" id="bill-amount" class="num-input bill-amount" placeholder="0"><br>  
+        <label for="tips-container">Select Tip %</label><br>
+        <div class="tips-container flex-row">
+          <button id="five-p" class="tip-btn">5%</button>
+          <button id="ten-p" class="tip-btn">10%</button>
+          <button id="fifteen-p" class="tip-btn">15%</button>
+          <button id="twentyfive-p" class="tip-btn">25%</button>
+          <button id="fifty-p" class="tip-btn">50%</button>
+          <input type="number" placeholder="Custom" id="custom-tip" class="custom-tip">
+        </div>
+        <label for="number-of-people">Number of People</label>
+        <label for="number-of-people" class="error-msg element-invisible">Can't  be zero</label>
+        <input type="number" id="num-of-people" class="num-input num-of-people" placeholder="0">
+      </div>
+      <div class="results-container flex-column">
+        <div class="results">
+          <div class="result tip-amount-container flex-row">
+            <div class="label-container flex-column">
+              <p class="label">Tip Amount</p>
+              <p class="sub-label">/ person</p>
+            </div>
+            <input type="text" id="tip-per-person" name="tip-per-person" placeholder="$0.00" readonly>
+          </div>
+          <div class="result total-container flex-row">
+            <div class="label-container flex-column">
+              <p class="label">Total</p>
+              <p class="sub-label">/ person</p>
+            </div>
+            <input type="text" id="total-per-person" name="total-per-person" class="total-per-person" placeholder="$0.00" readonly>
+          </div>
+        </div>
+        <button id="reset-btn" class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.element-invisible {
+  display: none;
+}
+
+.element-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+body {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  background-color: #c5e4e7;
+}
+
+main {
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 780px) {
+  main {
+    margin: 50px 0px;
+  }
+}
+
+.logo {
+  width: 70px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 780px) {
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+.calculator-container {
+  width: 60%;
+  max-width: 940px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .calculator-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .calculator-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.inputs-container {
+  padding: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.inputs-container input {
+  width: 100%;
+  border: 2px solid #f4fafa;
+  outline: none;
+  background-color: #f4fafa;
+  min-height: 40px;
+  padding: 0px 15px;
+  border-radius: 5px;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #00494d;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.inputs-container input::-webkit-input-placeholder {
+  font-size: 1.25rem;
+  color: #7f9c9f;
+}
+
+.inputs-container input:-ms-input-placeholder {
+  font-size: 1.25rem;
+  color: #7f9c9f;
+}
+
+.inputs-container input::-ms-input-placeholder {
+  font-size: 1.25rem;
+  color: #7f9c9f;
+}
+
+.inputs-container input::placeholder {
+  font-size: 1.25rem;
+  color: #7f9c9f;
+}
+
+.inputs-container input:focus, .inputs-container input:active {
+  border: 2px solid #26c0ab;
+}
+
+.inputs-container .bill-amount {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  margin-bottom: 15px;
+}
+
+.inputs-container .num-of-people {
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+}
+
+.inputs-container .custom-tip::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+.inputs-container .custom-tip:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+.inputs-container .custom-tip::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+.inputs-container .custom-tip::placeholder {
+  color: #5e7a7d;
+}
+
+.inputs-container .error-input {
+  border: 2px solid #f77e2d;
+}
+
+.inputs-container label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+
+.inputs-container .error-msg {
+  float: right;
+  padding-top: 12px;
+  color: #f77e2d;
+}
+
+.inputs-container .tips-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.inputs-container .tips-container .tip-btn {
+  width: 110px;
+  height: 40px;
+  margin-bottom: 15px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  background-color: #00494d;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.inputs-container .tips-container .tip-btn:hover {
+  color: #00494d;
+  background-color: rgba(38, 192, 171, 0.4);
+}
+
+.inputs-container .tips-container .active-tip-btn {
+  color: #00494d;
+  background-color: rgba(38, 192, 171, 0.4);
+}
+
+.inputs-container .tips-container .custom-tip {
+  width: 110px;
+  height: 40px;
+}
+
+.results-container {
+  padding: 30px;
+  margin: 30px 30px 30px 0px;
+  border-radius: 15px;
+  background-color: #00494d;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.results-container input {
+  border: none;
+  outline: none;
+  width: 200px;
+  background-color: transparent;
+  font-family: "Space Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.results-container input::-webkit-input-placeholder {
+  color: #26c0ab;
+}
+
+.results-container input:-ms-input-placeholder {
+  color: #26c0ab;
+}
+
+.results-container input::-ms-input-placeholder {
+  color: #26c0ab;
+}
+
+.results-container input::placeholder {
+  color: #26c0ab;
+}
+
+.results-container .result {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results-container .label-container {
+  color: white;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.results-container .label-container .label {
+  font-size: 0.9rem;
+}
+
+.results-container .label-container .sub-label {
+  color: #7f9c9f;
+  font-size: 0.7rem;
+}
+
+.results-container .reset-btn {
+  border: none;
+  outline: none;
+  height: 40px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #7f9c9f;
+  opacity: 0.2;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.results-container .reset-btn:hover {
+  opacity: 1;
+  background-color: #91dbd1;
+  color: #00494d;
+}
+
+@media screen and (max-width: 780px) {
+  .results-container {
+    margin: 00px 30px 30px 30px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
