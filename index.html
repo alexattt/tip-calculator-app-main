@@ -10,13 +10,14 @@
 </head>
 <body>
   <main class="flex-column">
+    <h1 class="element-invisible">Bill splitter app</h1>
     <img src="./images/logo.svg" alt="" class="logo">
     <div class="calculator-container flex-row">
       <div class="inputs-container">
         <label for="bill-amount">Bill</label><br>  
         <input type="number" name="bill-amount" id="bill-amount" class="num-input bill-amount" placeholder="0" min="0" step="0.01"><br>  
         <label for="tips-container">Select Tip %</label><br>
-        <div class="tips-container flex-row">
+        <div id="tips-container" class="tips-container flex-row">
           <button id="five-p" class="tip-btn">5%</button>
           <button id="ten-p" class="tip-btn">10%</button>
           <button id="fifteen-p" class="tip-btn">15%</button>
@@ -24,8 +25,8 @@
           <button id="fifty-p" class="tip-btn">50%</button>
           <input type="number" placeholder="Custom" id="custom-tip" class="custom-tip" max="100" oninput="this.value = this.value > 100 ? 100 : this.value">
         </div>
-        <label for="number-of-people">Number of People</label>
-        <label for="number-of-people" id="error-msg" class="error-msg element-invisible">Can't  be zero</label>
+        <label for="num-of-people">Number of People</label>
+        <label for="num-of-people" id="error-msg" class="error-msg element-invisible">Can't  be zero</label>
         <input type="number" id="num-of-people" class="num-input num-of-people" placeholder="0" oninput="this.value = Math.abs(this.value)">
       </div>
       <div class="results-container flex-column">
